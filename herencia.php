@@ -1,8 +1,10 @@
 <?php
-	class Futbolista{
+	abstract class Futbolista{
 		private $nombre;
 		private $apellido;
 		private $dorsal;
+
+		abstract public function celebrar();
 
 		public function	__construct($nombre, $apellido, $dorsal){
 			$this->nombre = $nombre;
@@ -53,6 +55,10 @@
 		public function anotar(){
 			return "Tiro a puerta y goooool";
 		}
+
+		public function celebrar(){
+			return "Corre al tiro de esquina y se reune con su equipo";
+		}
 	}
 
 	class Portero extends Futbolista{
@@ -68,6 +74,10 @@
 
 		public function atajar(){
 			return "Atajadoooon!!";
+		}
+
+		public function celebrar(){
+			return "Alza las manos al cielo y voltea a la grada";
 		}
 	}
 ?>
