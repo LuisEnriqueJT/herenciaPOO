@@ -4,6 +4,12 @@
 		private $apellido;
 		private $dorsal;
 
+		public function	__construct($nombre, $apellido, $dorsal){
+			$this->nombre = $nombre;
+			$this->apellido	 = $apellido;
+			$this->dorsal = $dorsal;
+		}
+
 		public function setNombre($nombre){
 			$this->nombre=$nombre;
 		}		
